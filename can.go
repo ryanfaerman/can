@@ -46,6 +46,6 @@ func Can[K any](actor K, action string, resources ...any) error {
 	return nil
 }
 
-func Cannot[K any](actor K, action string, resources ...any) bool {
+func Not[K any](actor K, action string, resources ...any) bool {
 	return Can(actor, action, resources...) != nil
 }
